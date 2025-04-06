@@ -3,7 +3,7 @@ var video;
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")
 	video = this.document.querySelector("video")
-	document.querySelector("#volume").innerText = "100%";
+	// document.querySelector("#volume").innerText = "100%";
 	video.volume = 1.0;
 
 	video.autoplay = false;
@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	video.play()
 	console.log("Play Video");
-	document.querySelector("#volume").innerText = "100%";
+	// document.querySelector("#volume").innerText = "100%";
 });
 
 // Pause
@@ -60,7 +60,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 // Volume slider
-document.querySelector("#slider").addEventListener("change", function() {
+document.querySelector("#slider").addEventListener("input", function() {
 	video.volume = this.value/100;
 	document.querySelector("#volume").innerText = this.value + "%";
 	console.log("Current volume: " + this.value/100);
