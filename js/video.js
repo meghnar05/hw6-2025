@@ -13,6 +13,11 @@ window.addEventListener("load", function() {
 
 // Play
 document.querySelector("#play").addEventListener("click", function() {
+	if (video.volume === 1.0) {
+		video.volume = 1.0;
+		document.querySelector("#slider").value = 100;
+		document.querySelector("#volume").innerText = "100%";
+	}
 	video.play()
 	console.log("Play Video");
 	// document.querySelector("#volume").innerText = "100%";
