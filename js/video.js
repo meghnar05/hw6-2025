@@ -17,7 +17,7 @@ document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	// document.querySelector("#volume").innerText = "100%";
 	document.querySelector("#volume").innerText = Math.round(video.volume*100) + "%";
-	video.volume = 1;
+	// video.volume = 1;
 });
 
 // Pause
